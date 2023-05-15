@@ -21,7 +21,7 @@ public class ChatManager
 
         ChatRoom = new ChatRoom(chatUser1, chatUser2);
         chatUser1.ChatHistory.AddMessage(ChatHistory.AuthorRoles.User, initialPrompt);
-
+        chatUser2.ChatHistory.AddMessage(ChatHistory.AuthorRoles.Assistant, initialPrompt);
         await _chatRoomRenderer.RenderAsync(ChatRoom);
     }
 
